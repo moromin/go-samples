@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package sample;
+
+option go_package = "./proto";
+
+service Student {
+    // 生徒の情報を取得する
+    rpc Get (StudentRequest) returns (StudentResponse) {}
+}
+
+message StudentRequest {
+    int32 id = 1;       // 取得したい生徒ID
+}
+
+message StudentResponse {
+    int32 id = 1;       // 生徒ID
+    string name = 2;    // 名前
+    int32 age = 3;      // 年齢
+    School school = 4;  // 所属の学校
+}
+
+message School {
+    int32 id = 1;       // 学校ID
+    string name = 2;    // 学校名
+    string grade = 3;   // 学年
+}

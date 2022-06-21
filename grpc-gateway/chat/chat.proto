@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package chat;
+option go_package = "./chat";
+
+import "google/api/annotations.proto";
+
+service ChatService {
+    rpc SayHello(MessageRequest) returns (MessageResponse) {
+        option (google.api.http) = {
+            get: "/hello"
+        };
+    }
+}
+
+message MessageRequest {
+    string body = 1;
+}
+
+message MessageResponse {
+    string body = 1;
+}

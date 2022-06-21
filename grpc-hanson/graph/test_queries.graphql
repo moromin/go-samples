@@ -1,0 +1,39 @@
+mutation createArticle {
+  createArticle(input:{author:"konishi", title:"hogehoge",content:"gPRC & GraphQL tutorial!"}) {
+    id
+    author
+    title
+    content
+  }
+}
+
+mutation updateArticle {
+  updateArticle(input:{id: 9,author:"moromin", title:"kagawa",content:"gPRC and GraphQL!"}) {
+    id
+    author
+    title
+    content
+  }
+}
+
+mutation deleteArticle{
+  deleteArticle(input:7)
+}
+
+query ReadArticle{
+  article(input:9) {
+    id
+    author
+    title
+    content
+  }
+}
+
+query ListArticle{
+  articles{
+    id
+    author
+    title
+    content
+  }
+}

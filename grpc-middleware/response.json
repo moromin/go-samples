@@ -1,0 +1,24 @@
+{
+    "level": "error",
+    "ts": 1649578992.5375848,
+    "caller": "zap/options.go:212",
+    "msg": "finished unary call with code Internal",
+    "grpc.start_time": "2022-04-10T17:23:12+09:00",
+    "system": "grpc",
+    "span.kind": "server",
+    "grpc.service": "db.DBService",
+    "grpc.method": "FindUserByEmail",
+    "peer.address": "127.0.0.1:53441",
+    "error": "rpc error: code = Internal desc = internal error",
+    "grpc.code": "Internal",
+    "grpc.time_ms": 11.972,
+    "stacktrace": "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap.DefaultMessageProducer\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/logging/zap/options.go:212\ngithub.com/grpc-ecosystem/go-grpc-middleware/logging/zap.UnaryServerInterceptor.func1\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/logging/zap/server_interceptors.go:39\ngithub.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1.1\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/chain.go:25\ngithub.com/grpc-ecosystem/go-grpc-middleware/tags.UnaryServerInterceptor.func1\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/tags/interceptors.go:23\ngithub.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1.1\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/chain.go:25\ngithub.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1\n\t/Users/kazuma/go/pkg/mod/github.com/grpc-ecosystem/go-grpc-middleware@v1.3.0/chain.go:34\ngithub.com/moromin/PFC-balancer/platform/db/proto._DBService_FindUserByEmail_Handler\n\t/Users/kazuma/go/src/PFC-balancer/platform/db/proto/db_grpc.pb.go:118\ngoogle.golang.org/grpc.(*Server).processUnaryRPC\n\t/Users/kazuma/go/pkg/mod/google.golang.org/grpc@v1.45.0/server.go:1282\ngoogle.golang.org/grpc.(*Server).handleStream\n\t/Users/kazuma/go/pkg/mod/google.golang.org/grpc@v1.45.0/server.go:1619\ngoogle.golang.org/grpc.(*Server).serveStreams.func1.2\n\t/Users/kazuma/go/pkg/mod/google.golang.org/grpc@v1.45.0/server.go:921"
+}
+{
+    "level": "info",
+    "ts": 1649578992.538711,
+    "caller": "zap/grpclogger.go:47",
+    "msg": "[transport]transport: loopyWriter.run returning. connection error: desc = \"transport is closing\"",
+    "system": "grpc",
+    "grpc_log": true
+}
